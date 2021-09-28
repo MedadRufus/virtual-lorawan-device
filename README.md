@@ -74,3 +74,11 @@ app_key = "275AD3615ACB47AA81E6B79A832CC5AE"
 In this configuration, we've created two packet forwarders and attached one device to each. In addition,
 we've given them different `server` labels. This will put their data reported to Prometheus under different
 labels.
+
+
+
+# Usage
+To run the server, run the following command:
+```bash
+cargo run
+```
