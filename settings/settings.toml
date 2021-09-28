@@ -1,0 +1,12 @@
+# Optionally override host IP
+[packet_forwarder.default]
+host = "13.66.213.36:1700" # router.us.thethings.network
+mac = "EE0E2F0DC1AC2DEB"  # Must register gateway on The things network and get mac
+
+
+
+[device.one.credentials]
+# Must register an OTAA device on the things network to get app_eui, dev_eui and app_key
+dev_eui = "70B3D57ED0045EA0"   
+app_eui = "0000000000000000"
+app_key = "016D787C91AA04A2F1BC5228B3813C46"
