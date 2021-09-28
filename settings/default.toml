@@ -4,17 +4,20 @@ default_packet_forwarder = "default"
 # this packet forwarder is pruned from the map
 [packet_forwarder.default]
 host = "127.0.0.1:1680"
-mac = "EE0E2F0DC1AC2DEB"
+mac = "0807060504030201"
 
 
 # Settings that works
 
-# Optionally override host IP
+# # Optionally override host IP
 # [packet_forwarder.default]
 # host = "13.66.213.36:1700" # router.us.thethings.network
-# mac = "EE0E2F0DC1AC2DEB"
+# mac = "EE0E2F0DC1AC2DEB"  # Must register gateway on The things network and get mac
+
+
 
 # [device.one.credentials]
-# dev_eui = "70B3D57ED0045EA0"
+# # Must register an OTAA device on the things network to get app_eui, dev_eui and app_key
+# dev_eui = "70B3D57ED0045EA0"   
 # app_eui = "0000000000000000"
 # app_key = "016D787C91AA04A2F1BC5228B3813C46"
