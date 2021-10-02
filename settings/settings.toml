@@ -6,6 +6,6 @@ host = "127.0.0.1:1689" # gateway-rs listening port
 
 [device.one.credentials]
 # Must register an OTAA device on the things network to get app_eui, dev_eui and app_key
-dev_eui = "6081F9C2F457D396"   
+dev_eui = "6081F999C006CCBC"   
 app_eui = "6081F9C2627E358C"
-app_key = "15C75F161C63DDFB1F07797380B3321A"
+app_key = "3D3CACE81ADDB8F171FF663C154C8F16"
