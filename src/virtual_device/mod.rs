@@ -55,6 +55,7 @@ impl<'a> VirtualDevice<'a> {
             .await
             .unwrap();
 
+        let mut counter = 0;
         let mut time_remaining = None;
         let mut lorawan = self.device;
         let mut metrics_sender = self.metrics_sender;
@@ -84,6 +85,13 @@ impl<'a> VirtualDevice<'a> {
                                 self.label, fcnt_up, fport
                             );
                         }
+                        
+                        // Infinite loop
+                        counter = counter + 1;
+                        if counter == 2 {
+                            loop {}
+                        }
+
                         lorawan.send(&data, fport, confirmed)
                     }
                     // UdpRx processes the raw UDP frame and delays it if necessary
