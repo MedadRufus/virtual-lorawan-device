@@ -1,8 +1,8 @@
 use super::*;
-
 use lorawan_device::{radio, region, Device, Event as LorawanEvent, Response as LorawanResponse};
 use lorawan_encoding::default_crypto::DefaultFactory as LorawanCrypto;
 use semtech_udp::StringOrNum;
+use std::process;
 use tokio::time::{sleep, Duration};
 use udp_radio::UdpRadio;
 pub(crate) use udp_radio::{IntermediateEvent, Receiver, Sender};
@@ -85,11 +85,11 @@ impl<'a> VirtualDevice<'a> {
                                 self.label, fcnt_up, fport
                             );
                         }
-                        
+
                         // Infinite loop
                         counter = counter + 1;
                         if counter == 2 {
-                            loop {}
+                            process::exit(1);
                         }
 
                         lorawan.send(&data, fport, confirmed)
